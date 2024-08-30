@@ -17,7 +17,7 @@ defmodule RambleWeb.CoreComponents do
   use Phoenix.Component
 
   alias Phoenix.LiveView.JS
-  import RambleWeb.Gettext
+  use Gettext, backend: RambleWeb.Gettext
 
   @doc """
   Renders a modal.
