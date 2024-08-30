@@ -1,0 +1,19 @@
+<.header>
+  User <%= @user.id %>
+  <:subtitle>This user records are fetched from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/users/#{@user}/edit"}>
+      <.button>Edit user</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<!-- Add your User Details here -->
+<h1><strong>User Details</strong></h1><br>
+<p><strong>ID: </strong><%= @user.id %><br><br></p>
+<p><strong>Name: </strong><%= @user.name %></p>
+<.list>
+  <:item title="Name"><%= @user.name %></:item>
+</.list>
+
+<.back navigate={~p"/users"}>Back to users</.back>
